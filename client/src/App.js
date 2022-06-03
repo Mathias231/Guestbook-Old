@@ -1,15 +1,11 @@
-import './css/App.css';
-import Navbar from './navbar/navbar';
+import Navbar from './components/navbar/Navbar';
+import Post from './components/posts/post';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
+    <Navbar />,
+    <Post />
     </div>
   );
 }
