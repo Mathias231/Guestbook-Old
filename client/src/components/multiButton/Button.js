@@ -2,10 +2,10 @@
 
 import Button from '@mui/material/Button';
 
-function button() {
+function multiButton() {
     return (
         <Button variant="contained">Opprett innlegg</Button>
     )
 }
 
-export default button;
+export default multiButton;
