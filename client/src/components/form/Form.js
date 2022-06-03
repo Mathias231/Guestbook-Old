@@ -3,7 +3,6 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
-
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -12,12 +11,20 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
 
+
 function Form() {
+    let name = 'create';
+
+    const handleClick = function(name) {
+        name = 'update'
+        console.log(name);
+    }
+
     return (
     <Grid item xs={6} md={4}>
         <Item>
             <h1>Opprett innlegg</h1>
-            <Button variant="contained">Opprett innlegg</Button>
+            <Button variant="contained" name={name} onClick={handleClick}>Opprett innlegg</Button>
         </Item>
     </Grid>
     )
