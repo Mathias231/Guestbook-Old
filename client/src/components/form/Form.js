@@ -15,7 +15,7 @@ function Form() {
     return (
     <Grid item xs={6} md={4}>
         <Item>
-            <h1>Opprett innlegg</h1>
+            <h1>Form</h1>
         </Item>
     </Grid>
     )
