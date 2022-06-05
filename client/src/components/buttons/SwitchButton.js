@@ -3,9 +3,7 @@
 import Button from '@mui/material/Button';
 import React, { useState } from "react";
 
-
-
-function MultiButton() {
+function SwitchButton() {
     const [name, setName] = useState('CLOSE');
 
     // Change's button's parameter (name) to "CLOSE" or OPEN on button click 
@@ -27,4 +25,4 @@ function MultiButton() {
     )
 }
 
-export default MultiButton;
+export default SwitchButton;

@@ -4,7 +4,10 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
-// Styling for Grid
+// Importing components
+import SwitchButton from '../buttons/SwitchButton'
+
+// Styling for Grid (found from grid documentation from MUI)
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -14,20 +17,22 @@ const Item = styled(Paper)(({ theme }) => ({
   }));
 
 
-// This fucntion creates Grids/boxes for posts results and form post creation (form)
+// Creates the "Main body" where form and posts will be inside.
 function MainBody() {
     return (
      <div>
-     <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          <Grid item xs={6} md={8}>
-            <Item>Resultat</Item>
+      <Box>
+          <Grid container spacing={2}>
+            <Grid item xs={6} md={8}>
+              <Item>Resultat</Item>
+            </Grid>
+            <Grid item xs={6} md={4}>
+              <Item>
+                <SwitchButton />
+              </Item>
+            </Grid>
           </Grid>
-          <Grid item xs={6} md={4}>
-            <Item>wdwd</Item>
-          </Grid>
-        </Grid>
-      </Box>
+        </Box>
       </div>
     )
 };
