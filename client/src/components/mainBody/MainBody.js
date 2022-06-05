@@ -4,8 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
-import Form from '../form/Form';
-
+// Styling for Grid
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -14,7 +13,9 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
 
-function Post() {
+
+// This fucntion creates Grids/boxes for posts results and form post creation (form)
+function MainBody() {
     return (
      <div>
      <Box sx={{ flexGrow: 1 }}>
@@ -22,11 +23,13 @@ function Post() {
           <Grid item xs={6} md={8}>
             <Item>Resultat</Item>
           </Grid>
-            <Form />
+          <Grid item xs={6} md={4}>
+            <Item>wdwd</Item>
+          </Grid>
         </Grid>
       </Box>
       </div>
     )
 };
 
-export default Post;
+export default MainBody;
