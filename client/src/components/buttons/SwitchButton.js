@@ -1,28 +1,28 @@
-// This button shall show and close a form on press
-
-import Button from '@mui/material/Button';
+//Importing style and useState for button porpuse
+import { Button, Collapse, Container } from '@mui/material/';
 import React, { useState } from "react";
 
-function SwitchButton() {
-    const [name, setName] = useState('CLOSE');
+// Importing components
+import Form from '../form/Form'
 
-    // Change's button's parameter (name) to "CLOSE" or OPEN on button click 
-    function changeName() {
-        switch(name) {
-            case 'CLOSE':
-                setName('OPEN', name)
-                break;
-            case 'OPEN':
-                setName('CLOSE', name)
-                break;
-            default:
-                throw new Error();
-        }
+function SwitchButton() {
+    // Sets show variable
+    const [show, setShow] = useState(false);
+
+    // Changes show from true to false
+    const handleChange = () => {
+        setShow((show) => !show)
     }
 
-    return (
-        <Button variant="contained" name={name} onClick={changeName}>Opprett innlegg</Button>
+    return(
+        <Container>
+            <Button variant="contained" value={show} onClick={handleChange}>{show ? "Lukk" : "Opprett innlegg"}</Button>
+            <Collapse in={show}>
+                {show ? <Form /> : null}
+            </Collapse>
+        </Container>
     )
 }
+
 
 export default SwitchButton;

@@ -20,6 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 // Creates the "Main body" where form and posts will be inside.
 function MainBody() {
+
     return (
      <div>
       <Box>
