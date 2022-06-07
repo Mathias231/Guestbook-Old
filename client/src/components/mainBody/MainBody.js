@@ -23,7 +23,7 @@ function MainBody() {
     return (
      <div>
       <Box>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} p={2}>
             <Grid item xs={6} md={8}>
               <Item>Resultat</Item>
             </Grid>
