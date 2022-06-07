@@ -4,7 +4,7 @@ import MainBody from './components/mainBody/MainBody'
 function App() {
   return (
     <div className="App">
-      <Navbar />,
+      <Navbar />
       <MainBody />
     </div>
   );
