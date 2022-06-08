@@ -1,23 +1,15 @@
 import * as React from 'react';
-import { Box } from '@mui/material/';
+import { Container } from '@mui/material/';
 
 // Importing component
 import Input from '../Input/Input'
 
 function Form() {
     return (
-        <Box
-            component="form"
-            sx={{
-            '& > :not(style)': { m: 1, width: '35ch' },
-            }}
-            mt={1}
-            noValidate
-            autoComplete="off"
-            required
-        >
-          <Input />
-      </Box>
+        <Container>
+            <h1>Opprett Innlegg</h1>
+            <Input />
+        </Container>
     )
 }
 
