@@ -2,10 +2,12 @@ import React from 'react';
 import { Button } from '@mui/material/';
 
 
-function SubmitButton() {
-    <Button>
-        Send
-    </Button>
+function Submit() {
+    return(
+        <Button variant="contained">
+            Opprett innlegg
+        </Button>
+    )
 }
 
-export default SubmitButton;
+export default Submit;
