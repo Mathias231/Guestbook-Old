@@ -5,7 +5,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
 // Importing components
-import SwitchButton from '../buttons/SwitchButton'
+import SwitchButton from '../Buttons/SwitchButton'
 
 
 // Styling for Grid (found from grid documentation from MUI)
