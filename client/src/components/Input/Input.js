@@ -6,8 +6,7 @@ function Input() {
         <TextField
         required
         id="outlined-required"
-        label="Required"
-        defaultValue="Hello World"
+        label="Tittel"
       />
     )
 }
