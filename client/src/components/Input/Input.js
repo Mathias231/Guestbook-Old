@@ -7,6 +7,7 @@ function Input() {
         required
         id="outlined-required"
         label="Tittel"
+        fullWidth
       />
     )
 }
