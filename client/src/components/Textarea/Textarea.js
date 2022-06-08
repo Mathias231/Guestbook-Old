@@ -1,13 +1,14 @@
 import React from 'react';
-import { TextareaAutosize } from '@mui/material/';
+import { TextField } from '@mui/material/';
 
 function Textarea() {
     return(
-        <TextareaAutosize
-            aria-label="minimum height"
-            minRows={3}
-            placeholder="Skriv her..."
-            style={{ width: 300 }}
+        <TextField
+            id="outlined-multiline-static"
+            label="Skriv her"
+            multiline
+            rows={4}
+            fullWidth
         />
     )
 }
