@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Box } from '@mui/material/';
+import { Container, Grid } from '@mui/material/';
 
 // Importing component
 import Input from '../Input/Input';
@@ -9,10 +9,12 @@ function Form() {
     return (
         <Container>
             <h1>Opprett Innlegg</h1>
-            <Box>
-                <Input /><br></br>
+            <Grid p={2}>
+                <Input />
+            </Grid>
+            <Grid direction="column" justifyContent="space-evenly" alignItems="center">
                 <Textarea />
-            </Box>
+            </Grid>
         </Container>
     )
 }
