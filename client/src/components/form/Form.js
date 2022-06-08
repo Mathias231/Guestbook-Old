@@ -9,10 +9,10 @@ function Form() {
     return (
         <Container>
             <h1>Opprett Innlegg</h1>
-            <Grid p={2}>
+            <Grid mt={2}>
                 <Input />
             </Grid>
-            <Grid direction="column" justifyContent="space-evenly" alignItems="center">
+            <Grid mt={2}>
                 <Textarea />
             </Grid>
         </Container>
