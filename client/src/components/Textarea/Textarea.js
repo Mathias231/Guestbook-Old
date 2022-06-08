@@ -6,8 +6,8 @@ function Textarea() {
         <TextareaAutosize
             aria-label="minimum height"
             minRows={3}
-            placeholder="Minimum 3 rows"
-            style={{ width: 200 }}
+            placeholder="Skriv her..."
+            style={{ width: 300 }}
         />
     )
 }
