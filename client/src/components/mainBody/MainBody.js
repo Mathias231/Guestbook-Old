@@ -7,6 +7,7 @@ import Grid from '@mui/material/Grid';
 // Importing components
 import SwitchButton from '../buttons/SwitchButton'
 
+
 // Styling for Grid (found from grid documentation from MUI)
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
