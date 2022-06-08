@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { TextField, Box } from '@mui/material/';
+import { Box } from '@mui/material/';
 
+// Importing component
+import Input from '../Input/Input'
 
 function Form() {
     return (
@@ -14,16 +16,7 @@ function Form() {
             autoComplete="off"
             required
         >
-        <h4>test</h4>
-        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-        <TextField
-          id="outlined-multiline-static"
-          label="Multiline"
-          multiline
-          rows={4}
-          defaultValue="Default Value"
-        />
-        <button>test</button>
+          <Input />
       </Box>
     )
 }
