@@ -3,7 +3,7 @@ import { Button, Collapse, Container } from '@mui/material/';
 import React, { useState } from "react";
 
 // Importing components
-import Form from '../form/Form'
+import Form from '../Form/Form'
 
 function SwitchButton() {
     // Sets show variable
