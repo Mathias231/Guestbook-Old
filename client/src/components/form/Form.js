@@ -3,10 +3,11 @@ import { Container, Grid } from '@mui/material/';
 
 // Importing component
 import Input from '../Input/Input';
-import Textarea from '../Textarea/Textarea';
+import Textarea from '../Input/Textarea';
 import SubmitButton from '../Buttons/SubmitButton';
 
 function Form() {
+
     return (
         <Container>
             <h1>Opprett Innlegg</h1>
