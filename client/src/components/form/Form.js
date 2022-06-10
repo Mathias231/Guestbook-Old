@@ -1,27 +1,34 @@
 import React, { useState } from 'react';
-import { Container, Grid, TextField, Button } from '@mui/material/';
+import { Container, Grid, TextField } from '@mui/material/';
 
 function Form() {
+    // useState variables
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    function handleSubmit() {
 
+    // Function for form
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = {title, body};
+        console.log(form);
     }
 
     return (
         <Container>
-            <form onSubmit={handleSubmit()}>
+            <form onSubmit={handleSubmit}>
                 <h1>Opprett Innlegg</h1>
+
                 <Grid mt={2}>
-                <TextField
-                    required
-                    id="outlined-required"
-                    label="Tittel"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    fullWidth
-                />
+                    <TextField
+                        required
+                        id="outlined-required"
+                        label="Tittel"
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        fullWidth
+                    />
                 </Grid>
+
                 <Grid mt={2}>
                     <TextField
                         id="outlined-multiline-static"
@@ -33,10 +40,11 @@ function Form() {
                         onChange={(e) => setBody(e.target.value)}
                     />
                 </Grid>
+
                 <Grid mt={2}>
-                    <Button variant="contained">
+                    <button variant="contained">
                         Opprett innlegg
-                    </Button>
+                    </button>
                 </Grid>
             </form>
         </Container>
