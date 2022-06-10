@@ -35,6 +35,7 @@ function Form() {
                         label="Skriv her"
                         multiline
                         rows={4}
+                        required
                         fullWidth
                         value={ body }
                         onChange={(e) => setBody(e.target.value)}
