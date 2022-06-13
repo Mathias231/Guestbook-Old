@@ -18,9 +18,10 @@ mongoose.connect(uri)
 .then(() => console.log('MongoDB connection success'))
 .catch(err => console.log(err));
 
+const postRouter = require("./routes/post");
 const usersRouter = require("./routes/users");
 
-// app.use('/post.js', postRouter);
+app.use('/post', postRouter);
 app.use('/users', usersRouter);
 
 app.listen(port, () => {
