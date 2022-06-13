@@ -13,7 +13,7 @@ This project is a practice for myself to learn how to use MERN stack.
 
 ## Getting started
 To get started with this project for yourself, follow the steps below:
-- Install NodeJs & MongoDB
+- Install [NodeJs](https://nodejs.org/) & [MongoDB](https://www.mongodb.com/)
 - Clone git repository
 ```
 git clone https://github.com/Mathias231/Guestbook.git
