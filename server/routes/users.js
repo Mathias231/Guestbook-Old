@@ -34,4 +34,19 @@ router.route('/:id').delete((request, response) => {
     .catch(err => response.status(400).json('Error: ' + err));
 });
 
+// Update user by ID
+router.route('/update/:id').post((request, response) => {
+    User.findById(request.params.id)
+    .then(User => {
+        User.username = request.body.username
+        User.password = request.body.password;
+
+        User.save()
+            .then(() => response.json('User has been updated!'))
+            .catch(err => response.status(400).json('Error: ' + err));
+    })
+    .catch(err => response.status(400).json('Error: ' + err));
+});
+
+
 module.exports = router;
