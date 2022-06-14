@@ -29,7 +29,7 @@ router.route('/add').post((request, response) => {
 
 // Delete user by ID
 router.route('/:id').delete((request, response) => {
-    User.findIdAndDelete(request.params.id)
+    User.findByIdAndDelete(request.params.id)
     .then(() => response.json('User deleted!'))
     .catch(err => response.status(400).json('Error: ' + err));
 });
