@@ -36,4 +36,19 @@ router.route('/:id').delete((request, response) => {
     .catch(err => response.status(400).json('Error: ' + err));
 });
 
+router.route('/update/:id').post((request, response) => {
+    Post.findById(request.params.id)
+    .then(Post => {
+        Post.title = request.body.title
+        Post.username = request.body.username
+        Post.content = request.body.content
+        Post.comments = request.body.comments;
+
+        Post.save()
+            .then(() => response.json('Post has been updated!'))
+            .catch(err => response.status(400).json('Error:' + err));
+    })
+    .catch(err => response.status(400).json('Error: ' + err));
+});
+
 module.exports = router;
