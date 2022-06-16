@@ -7,8 +7,8 @@ export default function ButtonAppBar() {
     <Box>
       <AppBar position="static">
         <Toolbar>
-            <Link to="/" style={{ textDecoration: 'none', color: 'white'}}>Home</Link>
-            <Link to="../Login/" style={{ textDecoration: 'none', color: 'white'}}>Login</Link>
+            <Link to="/" style={{ textDecoration: 'none', color: "white"}}>Home</Link>
+            <Link to="/login" style={{ textDecoration: 'none', color: 'White'}}>Login</Link>
         </Toolbar>
       </AppBar>
     </Box>
