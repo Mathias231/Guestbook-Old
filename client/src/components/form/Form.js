@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Container, Grid, TextField } from '@mui/material/';
 
 function Form() {
+
+
     // useState variables
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
