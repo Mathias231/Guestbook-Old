@@ -9,7 +9,7 @@ function SwitchButton() {
     // Sets show variable
     const [show, setShow] = useState(false);
 
-    // Changes show from true to false
+    // Changes show variable from true to false
     const handleChange = () => {
         setShow((show) => !show)
     }
