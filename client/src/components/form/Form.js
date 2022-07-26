@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import { Container, Grid, TextField } from '@mui/material/';
 
 function Form() {
-    // Work with constructer here
-
-
     // useState variables
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
 
     // Function for form
     const handleSubmit = (e) => {
+        // Prevent html to refresh on click
         e.preventDefault();
+        
         const form = {title, body};
         console.log(form);
-    }
+    };
 
     return (
         <Container>
