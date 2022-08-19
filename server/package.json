@@ -15,7 +15,7 @@
     "express": "^4.18.1",
     "mongodb": "^4.6.0",
     "mongoose": "^6.3.6",
-    "nodemon": "^2.0.16",
+    "nodemon": "^2.0.19",
     "package-lock.json": "^1.0.0"
   }
 }
