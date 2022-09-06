@@ -1,57 +1,55 @@
 import React, { useState } from 'react';
-import { Container, Grid, TextField } from '@mui/material/';
+import { appBarClasses, Container, Grid, TextField } from '@mui/material/';
 
 function Form() {
-    // useState variables
-    const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
+  // useState variables
+  const [title, setTitle] = useState('');
+  const [body, setBody] = useState('');
 
-    // Function for form
-    const handleSubmit = (e) => {
-        // Prevent html to refresh on click
-        e.preventDefault();
-        
-        const form = {title, body};
-        console.log(form);
-    };
+  // Function for form
+  const handleSubmit = (e) => {
+    // Prevent html to refresh on click
+    e.preventDefault();
 
-    return (
-        <Container>
-            <form onSubmit={handleSubmit}>
-                <h1>Opprett Innlegg</h1>
+    const form = { title, body };
+    console.log(form);
+  };
 
-                <Grid mt={2}>
-                    <TextField
-                        required
-                        id="outlined-required"
-                        label="Tittel"
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
-                        fullWidth
-                    />
-                </Grid>
+  return (
+    <Container>
+      <form onSubmit={handleSubmit}>
+        <h1>Opprett Innlegg</h1>
 
-                <Grid mt={2}>
-                    <TextField
-                        id="outlined-multiline-static"
-                        label="Skriv her"
-                        multiline
-                        rows={4}
-                        required
-                        fullWidth
-                        value={ body }
-                        onChange={(e) => setBody(e.target.value)}
-                    />
-                </Grid>
+        <Grid mt={2}>
+          <TextField
+            required
+            id="outlined-required"
+            label="Tittel"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            fullWidth
+          />
+        </Grid>
 
-                <Grid mt={2}>
-                    <button variant="contained">
-                        Opprett innlegg
-                    </button>
-                </Grid>
-            </form>
-        </Container>
-    )
+        <Grid mt={2}>
+          <TextField
+            id="outlined-multiline-static"
+            label="Skriv her"
+            multiline
+            rows={4}
+            required
+            fullWidth
+            value={body}
+            onChange={(e) => setBody(e.target.value)}
+          />
+        </Grid>
+
+        <Grid mt={2}>
+          <button variant="contained">Opprett innlegg</button>
+        </Grid>
+      </form>
+    </Container>
+  );
 }
 
 export default Form;
