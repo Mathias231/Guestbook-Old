@@ -22,7 +22,7 @@ To get started with this project for yourself, follow the steps below:
 git clone https://github.com/Mathias231/Guestbook.git
 ```
 
-To start the server you must open a new terminal and locate into server folder
+To start the server you must open a new terminal and locate yourself to the server folder
 
 ```
 cd server
