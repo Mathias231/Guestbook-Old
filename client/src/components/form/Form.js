@@ -4,15 +4,30 @@ import { Container, Grid, TextField } from '@mui/material/';
 function Form() {
   // useState variables
   const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
+  const [content, setContent] = useState('');
 
   // Function for form
   const handleSubmit = (e) => {
     // Prevent html to refresh on click
     e.preventDefault();
 
-    const form = { title, body };
+    const form = { title, content };
     console.log(form);
+
+    fetch('http://localhost:5000/post/add', {
+      method: 'POST',
+      body: form,
+    });
+
+    fetch('http://localhost:5000/post/add', {
+      method: 'POST',
+      body: JSON.stringify({
+        title: 'test2',
+        username: 'usertest',
+        content: 'hello world',
+        comments: 'test',
+      }),
+    });
   };
 
   return (
@@ -39,8 +54,8 @@ function Form() {
             rows={4}
             required
             fullWidth
-            value={body}
-            onChange={(e) => setBody(e.target.value)}
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
           />
         </Grid>
 
